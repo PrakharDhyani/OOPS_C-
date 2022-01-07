@@ -17,9 +17,12 @@ int main()
             cout << "Result is " << a / b << "\n";
         }
     }
+    
     catch (runtime_error &e)
     {
         cout << e.what() << "\n";
     }
     return 0;
 }
+ //Since no matching catch handler is found,
+//exception is uncaught, and the run-time call to std::terminate is made as for uncaught exception.
